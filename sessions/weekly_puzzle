@@ -1,0 +1,420 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/projects/python/weekly_puzzle
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 problems/weekly_puzzle
+badd +23 main.py
+badd +17 ~/projects/scala/facebookProbs/TrafficPeak/src/wee/tim/TrafficPeak.scala
+badd +38 ~/flex-maven-template/flex/pom.xml
+badd +1 ~/projects/scala/facebookProbs/TrafficPeak/pom.xml
+badd +1 ~/environment.plist
+badd +1 ~/.vimrc.backup.txt
+badd +1 ~/.eclipse_keyring
+badd +36 ~/projects/scala/lift/big-two/pom.xml
+badd +4 index.yaml
+badd +13 app.yaml
+badd +1 ~/app.aml
+badd +6 problems/problem.py
+badd +32 templates/base.html
+badd +1 1235541065_NERD_tree_
+badd +1 1235545104_NERD_tree_
+badd +20 templates/puzzle_form.html
+badd +1 problems/weekly_puzzle
+badd +1 problems/problem.py
+badd +358 /Applications/MacVim.app/Contents/Resources/vim/runtime/doc/usr_05.txt
+badd +4 ~/projects/python/django/weeklypuzzle/manage.py
+badd +3 ~/projects/python/django/weeklypuzzle/settings.py
+badd +1 ~/projects/python/django/weeklypuzzle/urls.py
+badd +1 ~/projects/python/django/weeklypuzzle/puzzle/__init__.py
+badd +1 ~/projects/python/django/weeklypuzzle/1235589358_NERD_tree_
+badd +14 settings.py
+badd +1 urls.py
+badd +1 puzzles/weekly_puzzle
+badd +11 puzzles/urls.py
+badd +83 puzzles/models.py
+badd +31 puzzles/views.py
+badd +1 templates/puzzle.html
+badd +1 puzzle_form.html
+badd +13 templates/puzzle_detail.html
+badd +1 1235628121_NERD_tree_
+badd +13 static/css/style.css
+badd +1 static/css/style.css
+badd +158 css/style.css
+badd +27 puzzles/utils.py
+badd +1 templates/all_puzzles.html
+badd +6 puzzles/template_library.py
+badd +9 templates/puzzle_listings.html
+badd +13 puzzles/templatetags/template_library.py
+badd +4 templates/solution_listings.html
+badd +14 templates/solution_form.html
+badd +10 templates/solution_detail.html
+badd +1 templates/puzzle_desc.html
+badd +1 projects/python/weekly_puzzle/problems/weekly_puzzle
+badd +17 projects/scala/facebookProbs/TrafficPeak/src/wee/tim/TrafficPeak.scala
+badd +38 flex-maven-template/flex/pom.xml
+badd +6 projects/python/weekly_puzzle/problems/problem.py
+badd +13 projects/python/weekly_puzzle/static/css/style.css
+badd +1 js/main.js
+badd +1 puzzles/middleware.py
+badd +4 templates/solution_desc.html
+badd +1 templates/index.html
+badd +6 puzzles/model_tests.py
+badd +2 puzzles/models_test.py
+badd +1 model_tests.py
+badd +1 puzzles/tests.py
+badd +1 models_test.py
+badd +58 make_release.sh
+badd +8 templates/base_with_comments.html
+badd +1 templates/_comments.html
+badd +4 templates/404.html
+badd +1 run_tests.sh
+badd +11 css/code.css
+badd +1 templates/500.html
+badd +6 templates/third_party.html
+badd +1 templates/puzzle_blurb.html
+badd +10 templates/vote_widget.html
+silent! argdel *
+set lines=54 columns=162
+edit puzzles/urls.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 12 - ((11 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+12
+normal! 069l
+tabedit puzzles/views.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 154 - ((36 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+154
+normal! 041l
+tabedit templates/puzzle_detail.html
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 31 + 27) / 54)
+exe '2resize ' . ((&lines * 19 + 27) / 54)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 27 - ((22 * winheight(0) + 15) / 31)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+27
+normal! 097l
+wincmd w
+argglobal
+edit templates/solution_detail.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 13 - ((9 * winheight(0) + 9) / 19)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+13
+normal! 0
+wincmd w
+exe '1resize ' . ((&lines * 31 + 27) / 54)
+exe '2resize ' . ((&lines * 19 + 27) / 54)
+tabedit templates/solution_listings.html
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 81 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 80 + 81) / 162)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+argglobal
+edit templates/puzzle_listings.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 16 - ((15 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 028l
+wincmd w
+exe 'vert 1resize ' . ((&columns * 81 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 80 + 81) / 162)
+tabedit css/style.css
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 104 - ((25 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+104
+normal! 01l
+tabedit puzzles/models.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 117 - ((9 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+117
+normal! 077l
+tabedit puzzles/utils.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 27 - ((26 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+27
+normal! 0
+tabedit templates/puzzle_blurb.html
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabedit templates/base.html
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 32 - ((31 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+32
+normal! 040l
+tabedit templates/vote_widget.html
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 25 + 27) / 54)
+exe '2resize ' . ((&lines * 25 + 27) / 54)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 21 - ((20 * winheight(0) + 12) / 25)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+21
+normal! 04l
+wincmd w
+argglobal
+edit templates/solution_desc.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 12) / 25)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+exe '1resize ' . ((&lines * 25 + 27) / 54)
+exe '2resize ' . ((&lines * 25 + 27) / 54)
+tabedit puzzles/templatetags/template_library.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 35 - ((34 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+35
+normal! 02l
+tabnext 2
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

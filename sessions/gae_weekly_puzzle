@@ -1,0 +1,117 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/projects/python/django/weeklypuzzle
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 ~/projects/python/weekly_puzzle/problems/weekly_puzzle
+badd +60 ~/projects/python/weekly_puzzle/main.py
+badd +17 ~/projects/scala/facebookProbs/TrafficPeak/src/wee/tim/TrafficPeak.scala
+badd +38 ~/flex-maven-template/flex/pom.xml
+badd +1 ~/projects/scala/facebookProbs/TrafficPeak/pom.xml
+badd +1 ~/environment.plist
+badd +1 ~/.vimrc.backup.txt
+badd +1 ~/.eclipse_keyring
+badd +36 ~/projects/scala/lift/big-two/pom.xml
+badd +4 ~/projects/python/weekly_puzzle/index.yaml
+badd +10 ~/projects/python/weekly_puzzle/app.yaml
+badd +1 ~/app.aml
+badd +6 ~/projects/python/weekly_puzzle/problems/problem.py
+badd +5 ~/projects/python/weekly_puzzle/templates/base.html
+badd +1 ~/projects/python/weekly_puzzle/1235541065_NERD_tree_
+badd +1 ~/projects/python/weekly_puzzle/1235545104_NERD_tree_
+badd +6 ~/projects/python/weekly_puzzle/templates/puzzle.html
+badd +1 problems/weekly_puzzle
+badd +1 problems/problem.py
+badd +358 /Applications/MacVim.app/Contents/Resources/vim/runtime/doc/usr_05.txt
+badd +1 manage.py
+badd +70 settings.py
+badd +1 urls.py
+badd +1 puzzle/__init__.py
+badd +1 1235589358_NERD_tree_
+silent! argdel *
+set lines=46 columns=128
+edit urls.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabedit settings.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 08l
+tabedit manage.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 4 - ((3 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+4
+normal! 0
+tabnext 2
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

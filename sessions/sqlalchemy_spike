@@ -1,0 +1,380 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/projects/flightcaster/flightcaster-research/python-spike
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +11 ~/projects/flightcaster/sqlalchemy_spike/buildout.cfg
+badd +6 ~/projects/flightcaster/data_twill/buildout.cfg
+badd +1 ~/projects/python/weekly_puzzle/problems/weekly_puzzle
+badd +23 ~/projects/python/weekly_puzzle/main.py
+badd +17 ~/projects/scala/facebookProbs/TrafficPeak/src/wee/tim/TrafficPeak.scala
+badd +38 ~/flex-maven-template/flex/pom.xml
+badd +1 ~/projects/scala/facebookProbs/TrafficPeak/pom.xml
+badd +1 ~/environment.plist
+badd +1 ~/.vimrc.backup.txt
+badd +1 ~/.eclipse_keyring
+badd +36 ~/projects/scala/lift/big-two/pom.xml
+badd +4 ~/projects/python/weekly_puzzle/index.yaml
+badd +13 ~/projects/python/weekly_puzzle/app.yaml
+badd +1 ~/app.aml
+badd +6 ~/projects/python/weekly_puzzle/problems/problem.py
+badd +32 ~/projects/python/weekly_puzzle/templates/base.html
+badd +1 ~/projects/python/weekly_puzzle/1235541065_NERD_tree_
+badd +1 ~/projects/python/weekly_puzzle/1235545104_NERD_tree_
+badd +20 ~/projects/python/weekly_puzzle/templates/puzzle_form.html
+badd +1 problems/weekly_puzzle
+badd +1 problems/problem.py
+badd +358 /Applications/MacVim.app/Contents/Resources/vim/runtime/doc/usr_05.txt
+badd +4 ~/projects/python/django/weeklypuzzle/manage.py
+badd +3 ~/projects/python/django/weeklypuzzle/settings.py
+badd +1 ~/projects/python/django/weeklypuzzle/urls.py
+badd +1 ~/projects/python/django/weeklypuzzle/puzzle/__init__.py
+badd +1 ~/projects/python/django/weeklypuzzle/1235589358_NERD_tree_
+badd +14 ~/projects/python/weekly_puzzle/settings.py
+badd +1 ~/projects/python/weekly_puzzle/urls.py
+badd +1 ~/projects/python/weekly_puzzle/puzzles/weekly_puzzle
+badd +12 ~/projects/python/weekly_puzzle/puzzles/urls.py
+badd +195 ~/projects/python/weekly_puzzle/puzzles/models.py
+badd +154 ~/projects/python/weekly_puzzle/puzzles/views.py
+badd +1 ~/projects/python/weekly_puzzle/templates/puzzle.html
+badd +1 ~/projects/python/weekly_puzzle/puzzle_form.html
+badd +55 ~/projects/python/weekly_puzzle/templates/puzzle_detail.html
+badd +1 ~/projects/python/weekly_puzzle/1235628121_NERD_tree_
+badd +13 ~/projects/python/weekly_puzzle/static/css/style.css
+badd +1 static/css/style.css
+badd +104 ~/projects/python/weekly_puzzle/css/style.css
+badd +27 ~/projects/python/weekly_puzzle/puzzles/utils.py
+badd +1 ~/projects/python/weekly_puzzle/templates/all_puzzles.html
+badd +6 ~/projects/python/weekly_puzzle/puzzles/template_library.py
+badd +16 ~/projects/python/weekly_puzzle/templates/puzzle_listings.html
+badd +35 ~/projects/python/weekly_puzzle/puzzles/templatetags/template_library.py
+badd +1 ~/projects/python/weekly_puzzle/templates/solution_listings.html
+badd +14 ~/projects/python/weekly_puzzle/templates/solution_form.html
+badd +13 ~/projects/python/weekly_puzzle/templates/solution_detail.html
+badd +1 ~/projects/python/weekly_puzzle/templates/puzzle_desc.html
+badd +1 projects/python/weekly_puzzle/problems/weekly_puzzle
+badd +1 projects/scala/facebookProbs/TrafficPeak/src/wee/tim/TrafficPeak.scala
+badd +1 flex-maven-template/flex/pom.xml
+badd +1 projects/python/weekly_puzzle/problems/problem.py
+badd +1 projects/python/weekly_puzzle/static/css/style.css
+badd +1 ~/projects/python/weekly_puzzle/js/main.js
+badd +1 ~/projects/python/weekly_puzzle/puzzles/middleware.py
+badd +1 ~/projects/python/weekly_puzzle/templates/solution_desc.html
+badd +1 ~/projects/python/weekly_puzzle/templates/index.html
+badd +6 ~/projects/python/weekly_puzzle/puzzles/model_tests.py
+badd +84 ~/projects/python/weekly_puzzle/puzzles/models_test.py
+badd +1 ~/projects/python/weekly_puzzle/model_tests.py
+badd +1 ~/projects/python/weekly_puzzle/puzzles/tests.py
+badd +1 ~/projects/python/weekly_puzzle/models_test.py
+badd +58 ~/projects/python/weekly_puzzle/make_release.sh
+badd +8 ~/projects/python/weekly_puzzle/templates/base_with_comments.html
+badd +1 ~/projects/python/weekly_puzzle/templates/_comments.html
+badd +4 ~/projects/python/weekly_puzzle/templates/404.html
+badd +1 ~/projects/python/weekly_puzzle/run_tests.sh
+badd +11 ~/projects/python/weekly_puzzle/css/code.css
+badd +1 ~/projects/python/weekly_puzzle/templates/500.html
+badd +6 ~/projects/python/weekly_puzzle/templates/third_party.html
+badd +1 ~/projects/python/weekly_puzzle/templates/puzzle_blurb.html
+badd +21 ~/projects/python/weekly_puzzle/templates/vote_widget.html
+badd +4 ~/projects/flightcaster/data_twill/flight_data.twill
+badd +9 ~/projects/flightcaster/sqlalchemy_spike/setup.py
+badd +5 ~/projects/flightcaster/sqlalchemy_spike/README
+badd +106 ~/projects/flightcaster/sqlalchemy_spike/ddl/tables.sql
+badd +12 buildout.cfg
+badd +10 data_download/README
+badd +5 src/connect_mysql.py
+badd +56 ~/projects/flightcaster/flightcaster-research/mysqlcj/src/org/parsimony_group/mysqlcj.clj
+badd +16 src/model/meta.py
+badd +1 src/model/__init__.py
+badd +35 src/model/features_data.py
+badd +5 src/config/environment.py
+badd +1 src/config/__init__.py
+badd +4 src/config/config.py
+badd +3 src/analysis/__init__.py
+badd +48 src/analysis/classifiers.py
+badd +17 src/tests/test_classifier.py
+badd +13 setup.py
+badd +1 src/test/test_classifier.py
+badd +1 src/analysis/bayes.py
+badd +16 src/analysis/freeform.py
+badd +1 v
+badd +1 src/test/test_classifier.py
+badd +9 README
+silent! argdel *
+set lines=56 columns=154
+edit src/model/meta.py
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 23 + 28) / 56)
+exe 'vert 1resize ' . ((&columns * 103 + 77) / 154)
+exe '2resize ' . ((&lines * 29 + 28) / 56)
+exe 'vert 2resize ' . ((&columns * 103 + 77) / 154)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 16 - ((15 * winheight(0) + 11) / 23)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 0
+wincmd w
+argglobal
+edit buildout.cfg
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 12 - ((0 * winheight(0) + 14) / 29)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+12
+normal! 07l
+wincmd w
+exe '1resize ' . ((&lines * 23 + 28) / 56)
+exe 'vert 1resize ' . ((&columns * 103 + 77) / 154)
+exe '2resize ' . ((&lines * 29 + 28) / 56)
+exe 'vert 2resize ' . ((&columns * 103 + 77) / 154)
+tabedit src/model/features_data.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 76 - ((46 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+76
+normal! 0
+tabedit buildout.cfg
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 27 + 28) / 56)
+exe '2resize ' . ((&lines * 25 + 28) / 56)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+argglobal
+edit README
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 9 - ((3 * winheight(0) + 12) / 25)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+9
+normal! 0
+wincmd w
+exe '1resize ' . ((&lines * 27 + 28) / 56)
+exe '2resize ' . ((&lines * 25 + 28) / 56)
+tabedit src/tests/test_classifier.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 18 - ((17 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+18
+normal! 08l
+tabedit src/analysis/classifiers.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 47 - ((46 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+47
+normal! 02l
+tabedit src/analysis/freeform.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 25 - ((24 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+25
+normal! 026l
+tabedit src/config/config.py
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 30 + 77) / 154)
+exe '2resize ' . ((&lines * 27 + 28) / 56)
+exe '3resize ' . ((&lines * 27 + 28) / 56)
+argglobal
+enew
+file __Tag_List__
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=9999
+setlocal fml=0
+setlocal fdn=20
+setlocal fen
+wincmd w
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 4 - ((3 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+4
+normal! 0
+wincmd w
+argglobal
+edit src/config/environment.py
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 30 + 77) / 154)
+exe '2resize ' . ((&lines * 27 + 28) / 56)
+exe '3resize ' . ((&lines * 27 + 28) / 56)
+tabnext 3
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
